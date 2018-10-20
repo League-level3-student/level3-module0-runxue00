@@ -1,5 +1,6 @@
 package _00_IntroToArrays;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
@@ -8,7 +9,9 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
 	//1. make a main method
-	
+	public static void main(String[] args) {
+		ArrayList<_01_RobotRace> Robots= new ArrayList<_01_RobotRace>();
+	}
 		//2. create an array of 5 robots.
 
 		//3. use a for loop to initialize the robots.

@@ -5,9 +5,21 @@ import java.util.Random;
 public class _00_ArrayCheatSheet {
 	public static void main(String[] args) {
 		//1. make an array of 5 Strings
-
+		String[] fruit = {"lyche", "dragonfruit", "pineapple"};
+		System.out.println(fruit[2]);
+		fruit[2] = "Mango";
+		System.out.println(fruit[2]);
+		for (int i = 0; i < fruit.length; i++) {
+			//fruit[0] = "Kiwi";
+			fruit[i] = "pear";
+			
+		}
+		for (int i = 0; i < fruit.length; i++) {
+			System.out.println(fruit[i]);
+		}
+}
 		//2. print the third element in the array
-
+		
 		//3. set the third element to a different value
 
 		//4. print the third element again
@@ -30,4 +42,4 @@ public class _00_ArrayCheatSheet {
 		//12. print only the last element in the array
 		
 	}
-}
+
