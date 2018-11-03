@@ -8,14 +8,34 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
-	//1. make a main method
+	 static //1. make a main method
+	int x = 100;
+	 int y;
+	
+	 
 	public static void main(String[] args) {
+		Random r =  new Random();
 		Robot[] robots = new Robot[5];
 		for (int i = 0; i < robots.length; i++) {
 			robots[i] = new Robot();
-			//Gotta do STEP 4
-			
+			robots[i].setX(x+=100);
+			robots[i].setY(550);
 		}
+		
+		while (true) {
+			for (int i = 0; i < robots.length; i++) {
+				 int num = r.nextInt(49);
+				robots[i].move(num);
+				
+			}
+		}
+		
+		//robots[1].setX(100);
+		//robots[1].setY(550);
+		//robots[2].setX(250);
+		//robots[2].setY(550);
+		//robots[3].setX(250);
+		//robots[3].setY(550);
 	}
 		//2. create an array of 5 robots.
 
