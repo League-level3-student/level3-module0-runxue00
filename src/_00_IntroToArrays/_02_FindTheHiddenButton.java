@@ -14,21 +14,27 @@ import javax.swing.JPanel;
 public class _02_FindTheHiddenButton implements ActionListener{
 	JFrame window;
 	JPanel panel;
+	JButton[] buttons;
+	int hiddenbutton;
 	
-	//1. create an array of JButtons. Don't initialize it yet.
+	//1. create an array of JButtons. Don't initialize it yet. √
 	
-	//2 create an integer variable called hiddenButton
+	//2 create an integer variable called hiddenButton. √
 	
 	public static void main(String[] args) {
 		new _02_FindTheHiddenButton().start();
+		String number = JOptionPane.showInputDialog("ENTER A POSITIVE NUMBER");
+		int positive = Integer.parseInt(number);
+
 	}
+    
 	
 	public void start() {
 		window = new JFrame("Find the Button");
 		panel = new JPanel();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//3.  Ask the user to enter a positive number and convert it to an int
+		//3.  Ask the user to enter a positive number and convert it to an int. √
 		
 		//4. Initialize the array of JButtons to be the size of the int created in step 3
 		
