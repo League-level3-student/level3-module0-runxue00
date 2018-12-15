@@ -2,6 +2,7 @@ package _00_IntroToArrays;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,20 +23,20 @@ public class _02_FindTheHiddenButton implements ActionListener {
 
 	public static void main(String[] args) {
 		new _02_FindTheHiddenButton().start();
-		String number = JOptionPane.showInputDialog("ENTER A POSITIVE NUMBER");
-		int positive = Integer.parseInt(number);
-		buttons = new JButton[positive];
+
 	}
 
 	public void start() {
 		window = new JFrame("Find the Button");
 		panel = new JPanel();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		String number = JOptionPane.showInputDialog("ENTER A POSITIVE NUMBER");
+		int positive = Integer.parseInt(number);
+		buttons = new JButton[positive];
 
 		// 3. Ask the user to enter a positive number and convert it to an int. √
 
 		// 4. Initialize the array of JButtons to be the size of the int created in step
-		// 3
 
 		// 5. Make a for loop to iterate through the JButton array √
 		// 6. initialize each JButton in the array √
@@ -45,6 +46,7 @@ public class _02_FindTheHiddenButton implements ActionListener {
 			buttons[i] = new JButton();
 			buttons[i].addActionListener(this);
 			panel.add(buttons[i]);
+
 		}
 
 		// 9 add the panel to the window √
@@ -57,10 +59,17 @@ public class _02_FindTheHiddenButton implements ActionListener {
 		JOptionPane.showMessageDialog(null, "Find the hidden button");
 		// 13. initialize the hiddenButton variable to a random number less than the int
 		// created in step 3( use the variable positive)
-
+		Random r = new Random();
+		hiddenbutton = r.nextInt(positive);
 		// 14. Set the text of the JButton located at hiddenButton to read "ME"
 
-		// 15. Use Thread.sleep(100); to pause the program.
+		// 15. Use Thread.sleep(100); to pause the program. √
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		// 16. Set the text of the JButton located at hiddenButton to be blank.
 
