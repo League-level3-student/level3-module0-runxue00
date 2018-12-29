@@ -36,7 +36,7 @@ public class _02_FindTheHiddenButton implements ActionListener {
 
 		// 3. Ask the user to enter a positive number and convert it to an int. √
 
-		// 4. Initialize the array of JButtons to be the size of the int created in step
+		// 4. Initialize the array of JButtons to be the size of the int created in step √
 
 		// 5. Make a for loop to iterate through the JButton array √
 		// 6. initialize each JButton in the array √
@@ -58,11 +58,15 @@ public class _02_FindTheHiddenButton implements ActionListener {
 		// 12. Give the user the instructions for the game. √
 		JOptionPane.showMessageDialog(null, "Find the hidden button");
 		// 13. initialize the hiddenButton variable to a random number less than the int
-		// created in step 3( use the variable positive)
+		// created in step 3( use the variable positive) √
 		Random r = new Random();
 		hiddenbutton = r.nextInt(positive);
-		// 14. Set the text of the JButton located at hiddenButton to read "ME"
-
+		// 14. Set the text of the JButton located at hiddenButton to read "ME" √
+        for (int i = 0; i < buttons.length; i++) {
+			if(i==hiddenbutton){
+				buttons[i].setText("ME");
+			}
+		}
 		// 15. Use Thread.sleep(100); to pause the program. √
 		try {
 			Thread.sleep(100);
@@ -71,16 +75,24 @@ public class _02_FindTheHiddenButton implements ActionListener {
 			e.printStackTrace();
 		}
 
-		// 16. Set the text of the JButton located at hiddenButton to be blank.
-
+		// 16. Set the text of the JButton located at hiddenButton to be blank. √
+		for (int i = 0; i < buttons.length; i++) {
+			if(i==hiddenbutton){
+				buttons[i].setText("");
+			}
+		}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonClicked = (JButton) e.getSource();
 
-		// 17. if the hiddenButton is clicked, tell the user that they win.
-
-		// 18. else tell them to try again
+		// 17. if the hiddenButton is clicked, tell the user that they win. √
+         if(buttons[hiddenbutton] == buttonClicked){
+        	 JOptionPane.showMessageDialog(null, "YOU WIN!!!!!!!!!!!!!!!!!!!!");
+         }else{
+        	 JOptionPane.showMessageDialog(null, "TRY AGAIN BUDDY"); 
+         }
+		// 18. else tell them to try again √
 	}
 }
